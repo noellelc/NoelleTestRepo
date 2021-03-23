@@ -2,7 +2,7 @@
 
 trigger:
   branches:
-    include: ["master", "*"]
+    include: ["main", "*"]
   paths:
     exclude: ["doc", "*.md"]
 
