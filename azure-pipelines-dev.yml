@@ -1,11 +1,12 @@
 # Runs weekly or after every push to all branches to validate indexing against development environment
 
-trigger:
-  branches:
-    include: ["master", "*"]
-  paths:
-    exclude: ["doc", "*.md"]
-
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
 queue:
   name: Hosted VS2017
   timeoutInMinutes: 60
@@ -21,7 +22,5 @@ steps:
   inputs:
     languages: 'typescript'
     githubServiceConnection: 'noellelc'
-    nugetFeed: 'https://devdiv.pkgs.visualstudio.com/Personal/_packaging/richnav/nuget/v3/index.json'
-    isPrivateFeed: true
     environment: development
   continueOnError: true
