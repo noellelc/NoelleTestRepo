@@ -22,6 +22,4 @@ steps:
     languages: 'typescript'
     githubServiceConnection: 'noellelc'
     environment: development
-    nugetFeed: 'https://devdiv.pkgs.visualstudio.com/Personal/_packaging/richnav/nuget/v3/index.json'
-    isPrivateFeed: true
   continueOnError: true
