@@ -23,5 +23,5 @@ steps:
     githubServiceConnection: 'noellelc'
     environment: 'development'
     nugetFeed: 'https://pkgs.dev.azure.com/azure-public/vside/_packaging/vs-buildservices@Local/nuget/v3/index.json'
-    sourceRootDir: '.\'
+    sourceRootDir: '$(Build.ArtifactStagingDirectory)/src'
   continueOnError: true
