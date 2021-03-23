@@ -14,8 +14,11 @@ on:
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-  - name: Rich Code Nav Indexer
-    uses: microsoft/RichCodeNavIndexer@v0.1.9
-    with:
-      languages: typescript
-      environment: development
+jobs:
+  richnav:
+    runs-on: windows-latest
+    steps:
+      - uses: microsoft/RichCodeNavIndexer@v0.1.9
+        with:
+          languages: typescript
+          environment: development
