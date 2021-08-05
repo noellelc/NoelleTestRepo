@@ -19,6 +19,7 @@ jobs:
         with:
           languages: typescript
           environment: development
+          nugetFeed: https://dev.azure.com/azure-public/vside/_packaging?_a=feed&feed=vs-buildservices
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           typescriptVersion: 0.6.0-next.15
           
