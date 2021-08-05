@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Rich Code Nav Indexer
+        uses: microsoft/RichCodeNavIndexer@v0.1
+        with:
+          languages: typescript
+          environment: development
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          typescriptVersion: 0.6.0-next.15
+          
