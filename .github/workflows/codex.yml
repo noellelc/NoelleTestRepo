@@ -19,8 +19,7 @@ jobs:
         with:
           languages: typescript
           environment: development
-          nugetFeed: https://dev.azure.com/azure-public/vside/_packaging/vs-buildservices/nuget/v3/index.json
-          nugetVersion: 0.1.2060-alpha
+          nugetFeed: https://pkgs.dev.azure.com/azure-public/vside/_packaging/vs-buildservices@Local/nuget/v3/index.json
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           typescriptVersion: 0.6.0-next.15
           
